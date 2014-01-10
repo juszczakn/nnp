@@ -1,6 +1,6 @@
 # nnp
 
-Nick's NotePad
+Short for Nick's NotePad. A simple notepad written in Clojure.
 
 ## Installation
 
@@ -18,7 +18,7 @@ Or compile to a jar using
     $ lein uberjar
 Run from cli with: 
 
-    $ java -jar nnp.jar
+    $ java -jar nnp-STANDALONE.jar
 
 
 ### Bugs
