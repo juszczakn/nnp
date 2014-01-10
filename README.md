@@ -4,7 +4,7 @@ Nick's NotePad
 
 ## Installation
 
-Download from https://github.com/caltelt/nnp
+Download from https://github.com/juszczakn/nnp
 
 ## Usage
 
