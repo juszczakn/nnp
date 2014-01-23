@@ -1,6 +1,5 @@
 (ns nnp.mainwin
   (:use seesaw.core)
-  (:use clojure.string)
   (:require [nnp.file-browser :as fb :only [default-width
                                             default-height
                                             save-file
@@ -12,7 +11,7 @@
                                             open?]])
   (:import java.io.File))
 
-(native!)
+;;(native!)
 
 ;;--------------------------------------------------
 ;;--------------------------------------------------

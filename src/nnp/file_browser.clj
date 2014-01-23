@@ -1,7 +1,7 @@
 (ns nnp.file-browser
   (:use seesaw.core)
   (:use seesaw.keymap)
-  (:use clojure.string)
+  (:require [clojure.string :as cljstr])
   (:import java.io.File)
   (:import java.awt.event.KeyEvent))
 
@@ -16,7 +16,7 @@
 
 (defn seq-of-files [dir]
   "Returns a seq of files for the directory given."
-  (map #(replace (str %) #".*\/" "") (.listFiles (File. dir))))
+  (map #(cljstr/replace (str %) #".*\/" "") (.listFiles (File. dir))))
 
 (defn list-of-dirs [fileseq]
   "Returns seq of all directories in fileseq"
@@ -123,7 +123,7 @@
 (map-key file-path "ENTER"
          (fn [e]
            "Pretty up the input text before displaying it"
-           (let [path (trim (text file-path))]
+           (let [path (cljstr/trim (text file-path))]
              ;if path has trailing '/' use that
              ; else add a trailing '/'
              (if (re-matches #".*\/" path)

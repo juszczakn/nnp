@@ -1,7 +1,7 @@
 (ns nnp.core
+  (:use seesaw.core)
   (:use nnp.mainwin)
   (:gen-class))
-
 
 
 (defn -main
@@ -9,4 +9,5 @@
   [& args]
   ;; work around dangerous default behaviour in Clojure
   (alter-var-root #'*read-eval* (constantly false))
+  (native!)
   main-window)
